@@ -22,6 +22,13 @@ export default function Card({item}) {
         setQuantity(prev => prev + 1);
     }
 
+    function handleQuantityDecrement() {
+        setQuantity(prev => {
+            const newValue = prev - 1;
+            return newValue < 1 ? 1 : newValue;
+        })
+    }
+
 
     return (
         <article className="card">
