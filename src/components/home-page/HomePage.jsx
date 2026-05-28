@@ -3,8 +3,8 @@ import { Link } from "react-router"
 export default function HomePage() {
     return (
         <main className="home-page">
-            <div className="img-container">
-                <img src="" alt="" alt='Hero Image'/>
+            <div className="img-hero-container">
+                <img src="" alt="Hero image of a girl with a long sleeve shirt"/>
             </div>
             <div className="desc-text">
                 <h1>Shop the Best</h1>
