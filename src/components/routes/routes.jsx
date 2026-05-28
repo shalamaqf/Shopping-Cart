@@ -1,3 +1,5 @@
+import HomePage from '../home-page/HomePage'
+
 const routes = [
     {
         path: '/',
