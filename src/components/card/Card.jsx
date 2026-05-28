@@ -18,6 +18,10 @@ export default function Card({item}) {
         }
     }
 
+    function handleQuantityIncrement() {
+        setQuantity(prev => prev + 1);
+    }
+
 
     return (
         <article className="card">
