@@ -29,7 +29,6 @@ export default function Card({item}) {
         })
     }
 
-
     return (
         <article className="card">
             <div className="img-item-container">
@@ -38,12 +37,17 @@ export default function Card({item}) {
             <h3>{item.name}</h3>
             <div className="quantity-section">
                 <div className="input-field-container">
-                    <label className ="label-quantity" htmlFor="quantity">{quantity}</label>
-                    <input type="number" name="quantity" className ="input-quantity"/>
+                    <label className ="label-quantity" htmlFor="quantity">Quantity: {quantity}</label>
+                    <input 
+                        type="number" 
+                        name="quantity" 
+                        className ="input-quantity" 
+                        value = {quantity}
+                        onChange={handleQuantityInput}/>
                 </div>
                 <div className="quantity-button-container">
-                    <button className="increment button">+</button>
-                    <button className="decrement button">-</button>
+                    <button className="increment button" onClick={handleQuantityIncrement}>+</button>
+                    <button className="decrement button" onClick={handleQuantityDecrement}>-</button>
                 </div>
             </div>
             <div className="add-to-cart-button-container">
