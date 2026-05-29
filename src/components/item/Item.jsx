@@ -1,3 +1,5 @@
+import PropTypes from "prop-types"
+
 export default function Item({cartItem}) {
     
     
@@ -26,4 +28,12 @@ export default function Item({cartItem}) {
         }
         </>
     )
+}
+
+Item.propTypes = {
+    cartItem: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+        quantity: PropTypes.number.isRequired
+    }).isRequired
 }
