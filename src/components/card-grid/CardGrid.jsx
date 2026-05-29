@@ -16,7 +16,8 @@ CardGrid.propTypes = {
         PropTypes.shape({
             id: PropTypes.number.isRequired,
             name: PropTypes.string.isRequired,
-            src: PropTypes.string.isRequired
+            src: PropTypes.string.isRequired,
+            price: PropTypes.number.isRequired
         })
     ).isRequired
 }
