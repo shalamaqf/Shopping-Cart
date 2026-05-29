@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { PRODUCT_API_URL } from '.../data/api.js';
+import CardGrid from "../card-grid/CardGrid.jsx";
 
 export default function ShopPage() {
     const [products, setProducts] = useState([]);
@@ -47,6 +48,9 @@ export default function ShopPage() {
     }, []);
 
     return (
-
+        <main className="shop-page">
+            <h2>Products</h2>
+            <CardGrid products={products}/>
+        </main>
     )
 }
