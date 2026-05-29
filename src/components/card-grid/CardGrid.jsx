@@ -1,4 +1,5 @@
 import Card from '../card/Card.jsx';
+import PropTypes from 'prop-types';
 
 export default function CardGrid({products}) {
     return (
@@ -8,4 +9,14 @@ export default function CardGrid({products}) {
             })}
         </div>
     )
+}
+
+CardGrid.propTypes = {
+    products: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            name: PropTypes.string.isRequired,
+            src: PropTypes.string.isRequired
+        })
+    ).isRequired
 }
