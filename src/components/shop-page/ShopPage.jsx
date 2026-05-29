@@ -29,6 +29,14 @@ export default function ShopPage() {
 
         return tempArray;
     }
+    
+    async function handleProductData() {
+        const data = await createProductObject();
+
+        if (isMounted.current) {
+            setProduct(data);
+        }
+    }
 
     return (
         
