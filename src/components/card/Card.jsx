@@ -33,9 +33,12 @@ export default function Card({item}) {
     return (
         <article className="card">
             <div className="img-item-container">
-                <img src="" alt="An image of a product item" />
+                <img src={item.src} alt={`An image of ${item.name}`} />
             </div>
-            <h3>{item.name}</h3>
+            <div className="item-detail-container">
+                <h3 className="item-detail name">{item.name}</h3>
+                <p className="item-detail price">{item.price}</p>
+            </div>
             <div className="quantity-section">
                 <div className="input-field-container">
                     <label className ="label-quantity" htmlFor="quantity">Quantity: {quantity}</label>
@@ -62,6 +65,7 @@ Card.propTypes = {
     item: PropTypes.shape({
         id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
-        src: PropTypes.string.isRequired
+        src: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired
   })
 }
