@@ -38,6 +38,14 @@ export default function ShopPage() {
         }
     }
 
+
+    useEffect( () => {
+        isMounted.current = true;
+        handleProductData();
+
+        return (() => isMounted.current = false);
+    }, []);
+
     return (
         
     )
