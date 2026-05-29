@@ -16,6 +16,17 @@ export default function ShopPage() {
         }
     }
 
+    async function createProductObject() {
+        const productData = await fetchProductData();
+        
+        const tempArray = productData.map(item => ({
+            id: item.id,
+            name: item.title,
+            src: item.image
+        }))
+        
+        return tempArray;
+    }
 
     return (
         
