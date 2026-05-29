@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useState } from "react";
 
 export default function Card({item}) {
@@ -55,4 +56,12 @@ export default function Card({item}) {
             </div>
         </article>
     )
+}
+
+Card.propTypes = {
+    item: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+        src: PropTypes.string.isRequired
+  })
 }
