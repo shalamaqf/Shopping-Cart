@@ -1,8 +1,10 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { PRODUCT_API_URL } from '.../data/api.js';
 
 export default function ShopPage() {
     const [product, setProduct] = useState([]);
+
+    let isMounted = useRef(true);
 
     async function fetchProductData() {
         try {
@@ -24,7 +26,7 @@ export default function ShopPage() {
             name: item.title,
             src: item.image
         }))
-        
+
         return tempArray;
     }
 
