@@ -17,8 +17,9 @@ export default function Item({cartItem}) {
             :
             <div className="item">
                 <div className="item-detail">
-                    <p>{cartItem.name}</p>
-                    <p>Quantity:  {cartItem.quantity}</p>
+                    <p className="cart-item-detail name">{cartItem.name}</p>
+                    <p className="cart-item-detail quantity">Quantity:  {cartItem.quantity}</p>
+                    <p className="cart-item-detail subtotal">Subtotal: {cartItem.price * cartItem.quantity}</p>
                 </div>
                 <div className="item-cart-button-container">
                     <button className="increment-cart">+</button>
@@ -34,6 +35,7 @@ Item.propTypes = {
     cartItem: PropTypes.shape({
         id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
-        quantity: PropTypes.number.isRequired
+        quantity: PropTypes.number.isRequired,
+        price: PropTypes.number.isRequired
     }).isRequired
 }
