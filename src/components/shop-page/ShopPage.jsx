@@ -25,7 +25,8 @@ export default function ShopPage() {
         const tempArray = productData.map(item => ({
             id: item.id,
             name: item.title,
-            src: item.image
+            src: item.image,
+            price: item.price
         }))
 
         return tempArray;
