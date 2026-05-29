@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { PRODUCT_API_URL } from '.../data/api.js';
 import CardGrid from "../card-grid/CardGrid.jsx";
 
