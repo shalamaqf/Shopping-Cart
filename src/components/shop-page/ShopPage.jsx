@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { PRODUCT_API_URL } from '.../data/api.js';
 
 export default function ShopPage() {
-    const [product, setProduct] = useState([]);
+    const [products, setProducts] = useState([]);
 
     let isMounted = useRef(true);
 
@@ -34,7 +34,7 @@ export default function ShopPage() {
         const data = await createProductObject();
 
         if (isMounted.current) {
-            setProduct(data);
+            setProducts(data);
         }
     }
 
@@ -47,6 +47,6 @@ export default function ShopPage() {
     }, []);
 
     return (
-        
+
     )
 }
