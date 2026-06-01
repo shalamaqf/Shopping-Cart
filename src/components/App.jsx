@@ -1,3 +1,6 @@
+import NavBar from '../components/navbar/Navbar'
+import { Outlet } from 'react-router';
+
 export default function App() {
     const [cart, setCart] = useState([]);
 
@@ -79,4 +82,18 @@ export default function App() {
             }
         })
     }
+
+    return (
+        <>
+            <NavBar />
+            <Outlet context={{
+                cart,
+                addToCart,
+                removeItem,
+                incrementItemQuantity,
+                decrementItemQuantity,
+                resetQuantityToDefault 
+            }} />
+        </>
+    )
 }
