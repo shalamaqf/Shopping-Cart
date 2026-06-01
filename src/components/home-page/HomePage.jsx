@@ -11,7 +11,7 @@ export default function HomePage() {
                 <p>Find what you love. Great prices, reliable delivery, and a seamless shopping experience.</p>
             </div>
             <div className="link-container">
-                <Link className='shop-now-link' to='/shop-page'>Shop now</Link>
+                <Link className='shop-now-link' to='shop-page'>Shop now</Link>
             </div>
         </main>
     )
