@@ -1,5 +1,6 @@
 import NavBar from '../components/navbar/Navbar'
 import { Outlet } from 'react-router';
+import { useState } from 'react';
 
 export default function App() {
     const [cart, setCart] = useState([]);
