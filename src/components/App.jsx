@@ -25,4 +25,10 @@ export default function App() {
             }
         )
     }
+
+    function removeItem(newItem) {
+        setCart(prevCart => 
+            prevCart.filter(item => item.id !== newItem.id)
+        )
+    }
 }
