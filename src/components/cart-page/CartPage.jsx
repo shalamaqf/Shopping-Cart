@@ -1,6 +1,12 @@
+import { useOutletContext } from 'react-router';
 import ItemGrid from '../item-grid/ItemGrid.jsx'
 
 export default function CartPage() {
+    const { removeItem,
+            incrementItemQuantity,
+            decrementItemQuantity,
+            resetQuantityToDefault,
+            cart } = useOutletContext();
 
     function calculateTotalPrice() {
         let total = 0;
