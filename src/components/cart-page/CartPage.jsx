@@ -22,7 +22,11 @@ export default function CartPage() {
     return (
         <main className='cart-page'>
             <h2>Cart</h2>
-            <ItemGrid />
+            <ItemGrid 
+            removeItem={removeItem}
+            incrementItemQuantity={incrementItemQuantity}
+            decrementItemQuantity={decrementItemQuantity}
+            resetQuantityToDefault={resetQuantityToDefault}/>
             <div className='total-container'>
                 <p className='total'>Total: {calculateTotalPrice()}</p>
             </div>
