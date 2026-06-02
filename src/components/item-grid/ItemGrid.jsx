@@ -1,6 +1,6 @@
 import Item from '../item/Item.jsx'
 
-export default function ItemGrid() {
+export default function ItemGrid({removeItem, incrementItemQuantity, decrementItemQuantity, resetQuantityToDefault}) {
     return (
         <div className="cart-item-grid">
             {
