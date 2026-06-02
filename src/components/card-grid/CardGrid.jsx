@@ -19,5 +19,7 @@ CardGrid.propTypes = {
             src: PropTypes.string.isRequired,
             price: PropTypes.number.isRequired
         })
-    ).isRequired
+    ).isRequired,
+
+    addToCart: PropTypes.func.isRequired
 }
