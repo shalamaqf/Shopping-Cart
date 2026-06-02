@@ -11,8 +11,8 @@ export default function CartPage() {
     function calculateTotalPrice() {
         let total = 0;
 
-        for (let i = 0; i < cartItems.length; i++) {
-            const subtotal = cartItems[i].price * cartItems[i].quantity;
+        for (let i = 0; i < cart.length; i++) {
+            const subtotal = cart[i].price * cart[i].quantity;
             total += subtotal;
         }
         
