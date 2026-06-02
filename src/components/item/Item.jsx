@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 
-export default function Item({item, removeItem, incrementItemQuantity, decrementItemQuantity, resetQuantityToDefault, cart}) {
+export default function Item({item, removeItem, incrementItemQuantity, decrementItemQuantity, resetQuantityToDefault}) {
     
     
     return (
@@ -32,10 +32,14 @@ export default function Item({item, removeItem, incrementItemQuantity, decrement
 }
 
 Item.propTypes = {
-    cartItem: PropTypes.shape({
+    item: PropTypes.shape({
         id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
         quantity: PropTypes.number.isRequired,
         price: PropTypes.number.isRequired
-    }).isRequired
+    }).isRequired,
+    removeItem: PropTypes.func.isRequired,
+    incrementItemQuantity: PropTypes.func.isRequired,
+    decrementItemQuantity: PropTypes.func.isRequired,
+    resetQuantityToDefault: PropTypes.func.isRequired,
 }
