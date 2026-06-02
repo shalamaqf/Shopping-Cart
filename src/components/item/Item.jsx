@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 
-export default function Item({cartItem}) {
+export default function Item({item, removeItem, incrementItemQuantity, decrementItemQuantity, resetQuantityToDefault, cart}) {
     
     
     return (
