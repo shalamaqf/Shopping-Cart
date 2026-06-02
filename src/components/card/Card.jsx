@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-export default function Card({item}) {
+export default function Card({item, addToCart}) {
     const [quantity, setQuantity] = useState(1);
 
     function handleQuantityInput(e) {
@@ -55,7 +55,7 @@ export default function Card({item}) {
                 </div>
             </div>
             <div className="add-to-cart-button-container">
-                <button className="add-to-cart-button">Add To Cart</button>
+                <button className="add-to-cart-button" onClick={() => addToCart(item, quantity)}>Add To Cart</button>
             </div>
         </article>
     )
