@@ -1,9 +1,11 @@
 import { useEffect, useState, useRef } from "react"
 import { PRODUCT_API_URL } from '.../data/api.js';
 import CardGrid from "../card-grid/CardGrid.jsx";
+import { useOutletContext } from "react-router";
 
 export default function ShopPage() {
     const [products, setProducts] = useState([]);
+    const { addToCart } = useOutletContext();
 
     let isMounted = useRef(true);
 
@@ -51,7 +53,7 @@ export default function ShopPage() {
     return (
         <main className="shop-page">
             <h2>Products</h2>
-            <CardGrid products={products}/>
+            <CardGrid products={products} addToCart={addToCart}/>
         </main>
     )
 }
