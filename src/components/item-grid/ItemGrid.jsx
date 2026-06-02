@@ -4,7 +4,7 @@ export default function ItemGrid({removeItem, incrementItemQuantity, decrementIt
     return (
         <div className="cart-item-grid">
             {
-                cartItems.map(cartItem => {
+                cart.map(cartItem => {
                     return <Item key={cartItem.id} cartItem={cartItem}/>
                 })
             }
