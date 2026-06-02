@@ -6,9 +6,9 @@ export default function Item({item, removeItem, incrementItemQuantity, decrement
     return (
         <>
         {
-            cartItem.quantity === 0 ? 
+            item.quantity === 0 ? 
             <div className="removal-container">
-                <p className="removal-permission-text">Are you sure want to remove {cartItem.name} from the cart?</p>
+                <p className="removal-permission-text">Are you sure want to remove {item.name} from the cart?</p>
                 <div className="removal-button-container">
                     <button className="yes-button">Yes</button>
                     <button className="no-button">No</button>
@@ -17,9 +17,9 @@ export default function Item({item, removeItem, incrementItemQuantity, decrement
             :
             <div className="item">
                 <div className="item-detail">
-                    <p className="cart-item-detail name">{cartItem.name}</p>
-                    <p className="cart-item-detail quantity">Quantity:  {cartItem.quantity}</p>
-                    <p className="cart-item-detail subtotal">Subtotal: {cartItem.price * cartItem.quantity}</p>
+                    <p className="cart-item-detail name">{item.name}</p>
+                    <p className="cart-item-detail quantity">Quantity:  {item.quantity}</p>
+                    <p className="cart-item-detail subtotal">Subtotal: {item.price * item.quantity}</p>
                 </div>
                 <div className="item-cart-button-container">
                     <button className="increment-cart">+</button>
