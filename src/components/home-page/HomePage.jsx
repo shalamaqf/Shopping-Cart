@@ -4,7 +4,7 @@ export default function HomePage() {
     return (
         <main className="home-page">
             <div className="img-hero-container">
-                <img src="" alt="Hero image of a girl with a long sleeve shirt"/>
+                <img src="../../assets/background.jpg" alt="Hero image of a girl with a long sleeve shirt"/>
             </div>
             <div className="desc-text">
                 <h1>Shop the Best</h1>
