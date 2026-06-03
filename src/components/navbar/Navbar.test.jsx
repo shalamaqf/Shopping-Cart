@@ -18,7 +18,7 @@ describe('Navbar component', () => {
         expect(screen.getByText('Shop now')).toBeInTheDocument();
     })
 
-    it("Go to shop page if user click on 'Home' link", async () => {
+    it("Go to shop page if user click on 'Shop' link", async () => {
         const user = userEvent.setup();
         const router = createMemoryRouter(routes, { initialEntries: ['/'] });
 
@@ -31,7 +31,7 @@ describe('Navbar component', () => {
         expect(screen.getByText('Products')).toBeInTheDocument();
     })
 
-    it("Go to cart page if user click on 'Home' link", async () => {
+    it("Go to cart page if user click on 'Cart' link", async () => {
         const user = userEvent.setup();
         const router = createMemoryRouter(routes, { initialEntries: ['/'] });
 
