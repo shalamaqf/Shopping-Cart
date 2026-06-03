@@ -30,4 +30,17 @@ describe('Navbar component', () => {
 
         expect(screen.getByText('Products')).toBeInTheDocument();
     })
+
+    it("Go to cart page if user click on 'Home' link", async () => {
+        const user = userEvent.setup();
+        const router = createMemoryRouter(routes, { initialEntries: ['/'] });
+
+        render(<RouterProvider router={router} />);
+
+        const cartLink = screen.getByRole('link', { name: 'Cart'});
+
+        await user.click(cartLink);
+
+        expect(screen.getByText('Total: 0')).toBeInTheDocument();
+    })
 })
