@@ -1,5 +1,5 @@
 import NavBar from '../components/navbar/Navbar'
-import { Outlet } from 'react-router';
+import { Outlet } from 'react-router-dom';
 import { useState } from 'react';
 
 export default function App() {

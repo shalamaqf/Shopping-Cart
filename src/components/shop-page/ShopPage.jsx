@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react"
-import { PRODUCT_API_URL } from '.../data/api.js';
+import { PRODUCT_API_URL } from '../../data/api.js';
 import CardGrid from "../card-grid/CardGrid.jsx";
-import { useOutletContext } from "react-router";
+import { useOutletContext } from "react-router-dom";
 
 export default function ShopPage() {
     const [products, setProducts] = useState([]);
