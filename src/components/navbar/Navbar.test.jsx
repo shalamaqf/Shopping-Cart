@@ -17,4 +17,17 @@ describe('Navbar component', () => {
 
         expect(screen.getByText('Shop now')).toBeInTheDocument();
     })
+
+    it("Go to shop page if user click on 'Home' link", async () => {
+        const user = userEvent.setup();
+        const router = createMemoryRouter(routes, { initialEntries: ['/'] });
+
+        render(<RouterProvider router={router} />);
+
+        const shopLink = screen.getByRole('link', { name: 'Shop'});
+
+        await user.click(shopLink);
+
+        expect(screen.getByText('Products')).toBeInTheDocument();
+    })
 })
