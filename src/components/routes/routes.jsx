@@ -4,7 +4,7 @@ import ShopPage from '../shop-page/ShopPage'
 import CartPage from '../cart-page/CartPage'
 import App from '../App';
 
-const routes = [
+export const routes = [
     {
         path: '/',
         element: <App />,
