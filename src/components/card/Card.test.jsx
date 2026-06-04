@@ -25,4 +25,21 @@ describe('Card component', () => {
         expect(inputField).toHaveValue(5);
         expect(screen.getByText('Quantity: 5')).toBeInTheDocument();
     })
+
+    it('Test if user click increment button, it will change the quantity by +1', async () => {
+        const user = userEvent.setup();
+        
+        render(<Card item={item}/>)
+
+        const incrementButton = screen.getByRole('button', { name: '+'});
+
+        await user.click(incrementButton);
+
+        expect(screen.getByText('Quantity: 2')).toBeInTheDocument();
+
+        await user.click(incrementButton);
+
+        expect(screen.getByText('Quantity: 3')).toBeInTheDocument();
+
+    })
 })
