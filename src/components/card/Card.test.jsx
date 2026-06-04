@@ -42,4 +42,23 @@ describe('Card component', () => {
         expect(screen.getByText('Quantity: 3')).toBeInTheDocument();
 
     })
+
+    it('Test if user click decrement button, it will change quantity by -1', async () => {
+        const user = userEvent.setup();
+        
+        render(<Card item={item}/>)
+
+        const decrementButton = screen.getByRole('button', { name: '-'});
+        const incrementButton = screen.getByRole('button', { name: '+'});
+
+        await user.click(decrementButton);
+
+        expect(screen.getByText('Quantity: 1')).toBeInTheDocument();
+
+        await user.click(incrementButton);
+        await user.click(incrementButton);
+        await user.click(decrementButton);
+
+        expect(screen.getByText('Quantity: 2')).toBeInTheDocument();
+    })
 })
