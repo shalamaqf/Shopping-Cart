@@ -21,9 +21,13 @@ describe('Card component', () => {
         const inputField = screen.getByRole('spinbutton');
 
         fireEvent.change(inputField, { target: { value: 5}})
-
         expect(inputField).toHaveValue(5);
         expect(screen.getByText('Quantity: 5')).toBeInTheDocument();
+
+        fireEvent.change(inputField, { target: { value: -1}})
+        expect(inputField).toHaveValue(1);
+        expect(screen.getByText('Quantity: 1')).toBeInTheDocument();
+
     })
 
     it('Test if user click increment button, it will change the quantity by +1', async () => {
