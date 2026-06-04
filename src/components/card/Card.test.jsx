@@ -1,7 +1,5 @@
-import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { fireEvent, render, screen } from "@testing-library/react";
-import { beforeEach, describe, expect, it, vi } from "vitest";
-import { routes } from "../routes/routes";
+import { describe, expect, it, vi } from "vitest";
 import Card from "./Card";
 import userEvent from "@testing-library/user-event";
 
@@ -11,8 +9,6 @@ const item = {
             src: 'jacket.jpg',
             price: 79.9
         }
-
-const addToCart = vi.fn();
 
 describe('Card component', () => {
     it('Test if user type in input field, it will change the quantity', async () => {
@@ -64,5 +60,22 @@ describe('Card component', () => {
         await user.click(decrementButton);
 
         expect(screen.getByText('Quantity: 2')).toBeInTheDocument();
+    })
+
+    it('Test if addToCart function is called with the correct arguments', async () => {
+        const user = userEvent.setup();
+        const mockAddToCart = vi.fn();
+        
+        render(<Card item={item} addToCart={mockAddToCart}/>)
+
+        const incrementButton = screen.getByRole('button', { name: '+'});
+        const addToCartButton = screen.getByRole('button', { name: 'Add To Cart'});
+
+        await user.click(incrementButton);
+        expect(screen.getByText('Quantity: 2')).toBeInTheDocument();
+
+        await user.click(addToCartButton);
+        expect(mockAddToCart).toHaveBeenCalled(1);
+        expect(mockAddToCart).toHaveBeenCalledWith(item, 2);
     })
 })
