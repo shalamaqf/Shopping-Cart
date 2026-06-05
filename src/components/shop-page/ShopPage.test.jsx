@@ -37,7 +37,7 @@ describe('Shop page component', () => {
         expect(screen.getByText('Jeans')).toBeInTheDocument();
         expect(screen.getByText('Boots')).toBeInTheDocument();
         expect(screen.getByText('Sandals')).toBeInTheDocument();
-        expect(global.fetch).toHaveBeenCalledWith('https://fakestoreapi.com/products?_limit=6')
+        expect(global.fetch).toHaveBeenCalledWith('https://fakestoreapi.com/products?limit=6')
     })
 
     it('Display error if the fetch is failed', () => {
