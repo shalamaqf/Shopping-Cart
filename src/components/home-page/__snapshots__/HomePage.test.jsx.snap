@@ -10,7 +10,7 @@ exports[`HomePage component > Render HomePage component to match snapshot 1`] = 
     >
       <img
         alt="Hero image of a girl with a long sleeve shirt"
-        src="../../assets/background.jpg"
+        src="/src/assets/background.jpg"
       />
     </div>
     <div
