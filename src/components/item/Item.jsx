@@ -19,7 +19,7 @@ export default function Item({item, removeItem, incrementItemQuantity, decrement
                 <div className="item-detail">
                     <p className="cart-item-detail name">{item.name}</p>
                     <p className="cart-item-detail quantity">Quantity:  {item.quantity}</p>
-                    <p className="cart-item-detail subtotal">Subtotal: {item.price * item.quantity}</p>
+                    <p className="cart-item-detail subtotal">Subtotal: {(item.price * item.quantity).toFixed(1)}</p>
                 </div>
                 <div className="item-cart-button-container">
                     <button className="increment-cart" onClick={() => incrementItemQuantity(item)}>+</button>
