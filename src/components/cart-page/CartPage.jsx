@@ -16,7 +16,7 @@ export default function CartPage() {
             total += subtotal;
         }
         
-        return total;
+        return total.toFixed(2);
     }
 
     return (
