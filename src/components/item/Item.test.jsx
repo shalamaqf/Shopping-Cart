@@ -48,7 +48,7 @@ describe('Item component', () => {
         await user.click(incrementButton);
         
         expect(screen.getByText('Quantity: 2')).toBeInTheDocument();
-        expect(screen.getByText('Subtotal: 159.80')).toBeInTheDocument();
+        expect(screen.getByText('Subtotal: $159.80')).toBeInTheDocument();
     })
 
     it("Test if user click decrement button, it will decrement item's quantity by 1 and change subtotal", async () => {
@@ -94,7 +94,7 @@ describe('Item component', () => {
         await user.click(decrementButton);
 
         expect(screen.getByText('Quantity: 3')).toBeInTheDocument();
-        expect(screen.getByText('Subtotal: 239.70')).toBeInTheDocument();
+        expect(screen.getByText('Subtotal: $239.70')).toBeInTheDocument();
     })
 
     it("Show removal permission when item's quantity reach 0", async () => {

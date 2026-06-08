@@ -46,6 +46,6 @@ describe('CartPage component', () => {
         const cartItem = container.querySelectorAll('.item')
 
         expect(cartItem).toHaveLength(2);
-        expect(screen.getByText('Total: 129.80')).toBeInTheDocument();
+        expect(screen.getByText('Total: $129.80')).toBeInTheDocument();
     })
 })

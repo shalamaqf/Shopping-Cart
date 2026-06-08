@@ -41,6 +41,6 @@ describe('Navbar component', () => {
 
         await user.click(cartLink);
 
-        expect(screen.getByText('Total: 0.00')).toBeInTheDocument();
+        expect(screen.getByText('Total: $0.00')).toBeInTheDocument();
     })
 })

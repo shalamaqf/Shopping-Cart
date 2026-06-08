@@ -37,7 +37,7 @@ export default function Card({item, addToCart}) {
             </div>
             <div className="item-detail-container">
                 <h3 className="item-detail name">{item.name}</h3>
-                <p className="item-detail price">{item.price}</p>
+                <p className="item-detail price">${item.price}</p>
             </div>
             <div className="quantity-section">
                 <div className="input-field-container">

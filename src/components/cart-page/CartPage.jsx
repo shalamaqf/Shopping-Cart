@@ -29,7 +29,7 @@ export default function CartPage() {
             resetQuantityToDefault={resetQuantityToDefault}
             cart={cart}/>
             <div className='total-container'>
-                <p className='total'>Total: {calculateTotalPrice()}</p>
+                <p className='total'>Total: ${calculateTotalPrice()}</p>
             </div>
         </main>
     )
