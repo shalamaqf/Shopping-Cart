@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom"
+import styles from './Navbar.module.css'
 
 export default function Navbar() {
     return (
-        <nav className="navlink-container">
-            <NavLink className='navlink home' to='/'>Home</NavLink>
-            <NavLink className='navlink shop' to='/shop-page'>Shop</NavLink>
-            <NavLink className='navlink cart' to='/cart-page'>Cart</NavLink>
+        <nav className={styles.nav}>
+            <NavLink className={({isActive}) => isActive ? `${styles.navlink} ${styles.active}` : styles.navlink} to='/'>Home</NavLink>
+            <NavLink className={({isActive}) => isActive ? `${styles.navlink} ${styles.active}` : styles.navlink} to='/shop-page'>Shop</NavLink>
+            <NavLink className={({isActive}) => isActive ? `${styles.navlink} ${styles.active}` : styles.navlink} to='/cart-page'>Cart</NavLink>
         </nav>
     )
 }
