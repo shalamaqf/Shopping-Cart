@@ -85,7 +85,7 @@ export default function App() {
     }
 
     return (
-        <>
+        <div id='wrapper'>
             <NavBar />
             <Outlet context={{
                 cart,
@@ -95,6 +95,6 @@ export default function App() {
                 decrementItemQuantity,
                 resetQuantityToDefault 
             }} />
-        </>
+        </div>
     )
 }
