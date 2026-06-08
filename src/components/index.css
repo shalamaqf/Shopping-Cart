@@ -5,3 +5,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  min-height: 100vh;
+
+}
+
+#root {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
