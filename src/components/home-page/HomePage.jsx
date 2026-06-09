@@ -3,7 +3,7 @@ import styles from './HomePage.module.css'
 
 export default function HomePage() {
     return (
-        <main>
+        <main className={styles.main}>
             <div className={styles.desc}>
                 <h1>Shop the Best</h1>
                 <p>Find what you love. <br />Great prices, reliable delivery, and a seamless shopping experience.</p>
