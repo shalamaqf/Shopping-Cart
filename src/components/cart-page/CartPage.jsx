@@ -1,5 +1,6 @@
 import { useOutletContext } from 'react-router-dom';
 import ItemGrid from '../item-grid/ItemGrid.jsx'
+import styles from './CartPage.module.css'
 
 export default function CartPage() {
     const { removeItem,
@@ -20,7 +21,7 @@ export default function CartPage() {
     }
 
     return (
-        <main className='cart-page'>
+        <main className={styles.main}>
             <h2>Cart</h2>
             <ItemGrid 
             removeItem={removeItem}
