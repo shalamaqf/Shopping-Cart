@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react"
 import { PRODUCT_API_URL } from '../../data/api.js';
 import CardGrid from "../card-grid/CardGrid.jsx";
 import { useOutletContext } from "react-router-dom";
+import styles from './ShopPage.module.css'
 
 export default function ShopPage() {
     const [products, setProducts] = useState([]);
@@ -51,7 +52,7 @@ export default function ShopPage() {
     }, []);
 
     return (
-        <main className="shop-page">
+        <main className={styles.main}>
             <h2>Products</h2>
             <CardGrid products={products} addToCart={addToCart}/>
         </main>
