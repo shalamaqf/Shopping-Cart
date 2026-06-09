@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
+import styles from './Card.module.css'
 
 export default function Card({item, addToCart}) {
     const [quantity, setQuantity] = useState(1);
@@ -31,16 +32,16 @@ export default function Card({item, addToCart}) {
     }
 
     return (
-        <article className="card">
-            <div className="img-item-container">
-                <img src={item.src} alt={`An image of ${item.name}`} />
+        <article className={styles.card}>
+            <div className={styles['img-container']}>
+                <img className={styles.img} src={item.src} alt={`An image of ${item.name}`} />
             </div>
-            <div className="item-detail-container">
+            <div className={styles['item-detail-container']}>
                 <h3 className="item-detail name">{item.name}</h3>
                 <p className="item-detail price">${item.price}</p>
             </div>
-            <div className="quantity-section">
-                <div className="input-field-container">
+            <div className={styles['quantity-section']}>
+                <div className={styles['input-field-container']}>
                     <label className ="label-quantity" htmlFor="quantity">Quantity: {quantity}</label>
                     <input 
                         type="number" 
@@ -49,13 +50,13 @@ export default function Card({item, addToCart}) {
                         value = {quantity}
                         onChange={handleQuantityInput}/>
                 </div>
-                <div className="quantity-button-container">
-                    <button className="increment button" onClick={handleQuantityIncrement}>+</button>
-                    <button className="decrement button" onClick={handleQuantityDecrement}>-</button>
+                <div className={styles['quantity-button-container']}>
+                    <button className={styles['quantity-button']} onClick={handleQuantityIncrement}>+</button>
+                    <button className={styles['quantity-button']} onClick={handleQuantityDecrement}>-</button>
                 </div>
             </div>
-            <div className="add-to-cart-button-container">
-                <button className="add-to-cart-button" onClick={() => addToCart(item, quantity)}>Add To Cart</button>
+            <div className={styles['addToCart-container']}>
+                <button className={styles['addToCart-button']} onClick={() => addToCart(item, quantity)}>Add To Cart</button>
             </div>
         </article>
     )

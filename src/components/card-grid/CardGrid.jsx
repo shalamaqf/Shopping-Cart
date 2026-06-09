@@ -1,9 +1,10 @@
 import Card from '../card/Card.jsx';
 import PropTypes from 'prop-types';
+import styles from './CardGrid.module.css'
 
 export default function CardGrid({products, addToCart}) {
     return (
-        <div className="card-grid">
+        <div className={styles['card-grid']}>
             {products.map(item => {
                 return <Card key={item.id} item={item} addToCart={addToCart}/>
             })}
