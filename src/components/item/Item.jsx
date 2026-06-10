@@ -1,4 +1,5 @@
 import PropTypes from "prop-types"
+import styles from './Item.module.css'
 
 export default function Item({item, removeItem, incrementItemQuantity, decrementItemQuantity, resetQuantityToDefault}) {
     
@@ -7,23 +8,23 @@ export default function Item({item, removeItem, incrementItemQuantity, decrement
         <>
         {
             item.quantity === 0 ? 
-            <div className="removal-container">
-                <p className="removal-permission-text">Are you sure want to remove {item.name} from the cart?</p>
-                <div className="removal-button-container">
-                    <button className="yes-button" onClick={() => removeItem(item)}>Yes</button>
-                    <button className="no-button" onClick={() => resetQuantityToDefault(item)}>No</button>
+            <div className={styles['removal-container']}>
+                <p className={styles['removal-text']}>Are you sure want to remove {item.name} from the cart?</p>
+                <div className={styles['removal-button-container']}>
+                    <button className={styles['removal-button']} onClick={() => removeItem(item)}>Yes</button>
+                    <button className={styles['removal-button']} onClick={() => resetQuantityToDefault(item)}>No</button>
                 </div>
             </div>
             :
-            <div className="item">
-                <div className="item-detail">
+            <div className={styles['item-container']}>
+                <div className={styles['item-detail-container']}>
                     <p className="cart-item-detail name">{item.name}</p>
                     <p className="cart-item-detail quantity">Quantity:  {item.quantity}</p>
                     <p className="cart-item-detail subtotal">Subtotal: ${(item.price * item.quantity).toFixed(2)}</p>
                 </div>
-                <div className="item-cart-button-container">
-                    <button className="increment-cart" onClick={() => incrementItemQuantity(item)}>+</button>
-                    <button className="decrement-cart" onClick={() => decrementItemQuantity(item)}>-</button>
+                <div className={styles['item-button-container']}>
+                    <button className={styles['button-quantity']} onClick={() => incrementItemQuantity(item)}>+</button>
+                    <button className={styles['button-quantity']} onClick={() => decrementItemQuantity(item)}>-</button>
                 </div>
             </div>
         }

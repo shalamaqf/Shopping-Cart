@@ -1,0 +1,52 @@
+.item-container {
+    padding: 1rem;
+    border: 1px solid rgba(200, 200, 200, 1.0);
+    border-bottom: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-detail-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.item-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.button-quantity {
+    padding: 0.1rem 0.3rem;
+    cursor: pointer;
+}
+
+.removal-container {
+    padding: 1rem;
+    border: 1px solid rgba(200, 200, 200, 1.0);
+    border-bottom: none;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;   
+}
+
+.removal-text {
+    font-size: 1.2rem;
+}
+
+.removal-button-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.removal-button {
+    font-size: 1rem;
+    padding: 0.1rem 0.3rem;
+    cursor: pointer;
+}

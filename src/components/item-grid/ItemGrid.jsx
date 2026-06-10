@@ -1,9 +1,10 @@
 import Item from '../item/Item.jsx'
 import PropTypes from 'prop-types'
+import styles from './ItemGrid.module.css'
 
 export default function ItemGrid({removeItem, incrementItemQuantity, decrementItemQuantity, resetQuantityToDefault, cart}) {
     return (
-        <div className="cart-item-grid">
+        <div className={styles['item-grid']}>
             {
                 cart.map(item => {
                     return <Item 
