@@ -5,11 +5,12 @@
     gap: 2rem;
     min-height: 3.5rem;
 
-    background-color: rgba(0, 4, 53, 1.0);
+    background-color: rgba(0, 0, 0, 1);
 }
 
 .navlink {
     font-size: 1.3rem;
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -18,7 +19,7 @@
 }
 
 .active:visited {
-    color:rgba(220, 20, 60, 1.0);
+    color: rgba(220, 20, 60, 1.0);
 }
 
 .active {
@@ -26,5 +27,5 @@
 }
 
 .navlink:hover {
-    color: rgba(220, 20, 60, 1.0);
+    color: rgba(0, 0, 128, 1);
 }
