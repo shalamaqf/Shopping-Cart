@@ -31,7 +31,7 @@ h1 {
 }
 
 .link {
-    margin-left: 7rem;
+    margin-left: 8rem;
     border: 2px solid rgba(255, 255, 255, 0.9);
     padding: 0.1rem 1rem;
     border-radius: 10px;
@@ -51,8 +51,7 @@ h1 {
 }
 
 .link a:hover {
-    color: rgba(0, 0, 100, 1);
-    transition: color 0.2s ease;
+    color: rgba(0, 80, 0, 1);
 }
 
 .link {
@@ -61,6 +60,6 @@ h1 {
 
 .link:hover {
     transform: translateX(20px);
-    border: 2px solid rgba(0, 0, 100, 1);
+    border: 2px solid rgba(0, 80, 0, 1);
     border-radius: 10px;
 }
