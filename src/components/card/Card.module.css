@@ -1,16 +1,23 @@
 .card {
     width: 100%;
-    max-width: 10rem;
-    padding: 1rem;
+    padding: 1.5rem 2rem;
     
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
+}
+
+.card h3 {
+    font-size: 1rem;
 }
 
 .img-container {
     width: 100%;
+    max-width: 10rem;
+    display: flex;
+    justify-content: center;
 }
 
 .img {
@@ -33,6 +40,13 @@
     gap: 1rem;
 }
 
+.card input {
+    border-radius: 5px;
+    border: 1px solid rgba(0, 80, 0, 1);
+    outline-color: rgba(0, 80, 0, 1);
+    padding: 0 0.2rem;
+}
+
 .quantity-button-container {
     display: flex;
     align-self: flex-end;
@@ -40,8 +54,18 @@
 }
 
 .quantity-button {
-    padding: 0.1rem 0.3rem;
+    padding: 0.1rem 0.5rem;
     cursor: pointer;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 80, 0, 1);
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 80, 0, 1);
+    font-size: 1rem;
+}
+
+.quantity-button:hover {
+    background-color: rgba(0, 0, 0, 1);
+    border: 1px solid  rgba(255, 255, 255, 0.9);
 }
 
 .input-field-container {
@@ -56,8 +80,16 @@
 
 .addToCart-button {
     font-size: 1rem;
-    padding: 0.1rem 0.5rem;
+    padding: 0.1rem 1rem;
     border-radius: 15px;
     border: 0px;
     cursor: pointer;
+    border: 1px solid rgba(0, 80, 0, 1);
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 80, 0, 1);
+}
+
+.addToCart-button:hover {
+    background-color: rgba(0, 0, 0, 1);
+    border: 1px solid  rgba(255, 255, 255, 0.9);
 }
