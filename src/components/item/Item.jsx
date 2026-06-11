@@ -20,7 +20,7 @@ export default function Item({item, removeItem, incrementItemQuantity, decrement
                 <div className={styles['item-detail-container']}>
                     <p className="cart-item-detail name">{item.name}</p>
                     <p className="cart-item-detail quantity">Quantity:  {item.quantity}</p>
-                    <p className="cart-item-detail subtotal">Subtotal: ${(item.price * item.quantity).toFixed(2)}</p>
+                    <p className="cart-item-detail price">Subtotal: <span className={styles.price}>${(item.price * item.quantity).toFixed(2)}</ span></p>
                 </div>
                 <div className={styles['item-button-container']}>
                     <button className={styles['button-quantity']} onClick={() => incrementItemQuantity(item)}>+</button>
