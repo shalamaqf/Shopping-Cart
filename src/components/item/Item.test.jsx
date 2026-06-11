@@ -46,9 +46,11 @@ describe('Item component', () => {
 
         const incrementButton = screen.getAllByRole('button', { name: '+'})[0];
         await user.click(incrementButton);
+
+        const subtotals = screen.getAllByTestId('subtotal');
         
         expect(screen.getByText('Quantity: 2')).toBeInTheDocument();
-        expect(screen.getByText('Subtotal: $159.80')).toBeInTheDocument();
+        expect(subtotals[0]).toHaveTextContent('Subtotal: $159.80');
     })
 
     it("Test if user click decrement button, it will decrement item's quantity by 1 and change subtotal", async () => {
@@ -92,9 +94,11 @@ describe('Item component', () => {
         await user.click(incrementButton);
         await user.click(incrementButton);
         await user.click(decrementButton);
+        
+        const subtotals = screen.getAllByTestId('subtotal');
 
         expect(screen.getByText('Quantity: 3')).toBeInTheDocument();
-        expect(screen.getByText('Subtotal: $239.70')).toBeInTheDocument();
+        expect(subtotals[0]).toHaveTextContent('Subtotal: $239.70');
     })
 
     it("Show removal permission when item's quantity reach 0", async () => {
@@ -176,7 +180,7 @@ describe('Item component', () => {
 
         const yesButton = screen.getByRole('button', { name: 'Yes'});
         await user.click(yesButton);
-        const cartItem = container.querySelectorAll('.item')
+        const cartItem = screen.getAllByTestId('item')
 
         expect(cartItem).toHaveLength(1);
     })
@@ -223,7 +227,7 @@ describe('Item component', () => {
 
         const noButton = screen.getByRole('button', { name: 'No'});
         await user.click(noButton);
-        const cartItem = container.querySelectorAll('.item');
+        const cartItem = screen.getAllByTestId('item')
 
         expect(cartItem).toHaveLength(2);
         expect(screen.getByText('Quantity: 1')).toBeInTheDocument();

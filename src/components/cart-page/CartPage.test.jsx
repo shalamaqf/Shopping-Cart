@@ -29,7 +29,7 @@ describe('CartPage component', () => {
 
         global.fetch.mockResolvedValue(mockResponse);
 
-        const { container } = render(<RouterProvider router={router} />);
+        render(<RouterProvider router={router} />)
 
         // Implement user interaction to click shop link in home page
         const shopLink = screen.getByRole('link', { name: 'Shop'});
@@ -43,7 +43,7 @@ describe('CartPage component', () => {
         const cartLink = screen.getByRole('link', { name: 'Cart'});
         await user.click(cartLink);
        
-        const cartItem = container.querySelectorAll('.item')
+        const cartItem = screen.getAllByTestId('item')
 
         expect(cartItem).toHaveLength(2);
         expect(screen.getByText('Total: $129.80')).toBeInTheDocument();
