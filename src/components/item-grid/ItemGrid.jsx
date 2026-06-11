@@ -4,20 +4,29 @@ import styles from './ItemGrid.module.css'
 
 export default function ItemGrid({removeItem, incrementItemQuantity, decrementItemQuantity, resetQuantityToDefault, cart}) {
     return (
-        <div className={styles['item-grid']}>
+        <>
             {
-                cart.map(item => {
-                    return <Item 
-                    key={item.id} 
-                    item={item}
-                    removeItem={removeItem}
-                    incrementItemQuantity={incrementItemQuantity}
-                    decrementItemQuantity={decrementItemQuantity}
-                    resetQuantityToDefault={resetQuantityToDefault}
-                    />
-                })
+                cart.length === 0 ? 
+                <div className={styles['no-items-container']}>
+                    <p>No items in cart.</p>
+                </ div> 
+                :
+                <div className={styles['item-grid']}>
+                    {
+                        cart.map(item => {
+                            return <Item 
+                            key={item.id} 
+                            item={item}
+                            removeItem={removeItem}
+                            incrementItemQuantity={incrementItemQuantity}
+                            decrementItemQuantity={decrementItemQuantity}
+                            resetQuantityToDefault={resetQuantityToDefault}
+                            />
+                        })
+                    }
+                </div>
             }
-        </div>
+        </>
     )
 }
 

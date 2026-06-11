@@ -50,10 +50,6 @@ h1 {
     color: rgba(255, 255, 255, 0.9);
 }
 
-.link a:hover {
-    color: rgba(0, 80, 0, 1);
-}
-
 .link {
     transition: transform 0.2s ease-in-out;
 }
@@ -62,4 +58,9 @@ h1 {
     transform: translateX(20px);
     border: 2px solid rgba(0, 80, 0, 1);
     border-radius: 10px;
+    color: rgba(0, 80, 0, 1);
+}
+
+.link a:hover {
+    color: rgba(0, 80, 0, 1);
 }
