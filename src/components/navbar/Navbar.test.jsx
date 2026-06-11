@@ -15,7 +15,7 @@ describe('Navbar component', () => {
 
         await user.click(homeLink);
 
-        expect(screen.getByText('Shop now')).toBeInTheDocument();
+        expect(screen.getByText('➔ Shop now')).toBeInTheDocument();
     })
 
     it("Go to shop page if user click on 'Shop' link", async () => {

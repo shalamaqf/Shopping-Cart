@@ -3,35 +3,29 @@
 exports[`HomePage component > Render HomePage component to match snapshot 1`] = `
 <div>
   <main
-    class="home-page"
+    class="_main_1d65cc"
   >
     <div
-      class="img-hero-container"
-    >
-      <img
-        alt="Hero image of a girl with a long sleeve shirt"
-        src="/src/assets/background.jpg"
-      />
-    </div>
-    <div
-      class="desc-text"
+      class="_desc_1d65cc"
     >
       <h1>
         Shop the Best
       </h1>
       <p>
-        Find what you love. Great prices, reliable delivery, and a seamless shopping experience.
+        Find what you love. 
+        <br />
+        Great prices, reliable delivery, and a seamless shopping experience.
       </p>
     </div>
     <div
-      class="link-container"
+      class="_link_1d65cc"
     >
       <a
         class="shop-now-link"
         data-discover="true"
         href="/shop-page"
       >
-        Shop now
+        ➔ Shop now
       </a>
     </div>
   </main>

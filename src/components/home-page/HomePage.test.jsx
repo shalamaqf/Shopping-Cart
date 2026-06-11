@@ -21,9 +21,9 @@ describe('HomePage component', () => {
         const router = createMemoryRouter(routes, { initialEntries: ['/'] });
 
         render(<RouterProvider router={router} />);
-        expect(screen.getByText('Shop now')).toBeInTheDocument();
+        expect(screen.getByText('➔ Shop now')).toBeInTheDocument();
         
-        const link = screen.getByRole('link', { name: 'Shop now'});
+        const link = screen.getByRole('link', { name: '➔ Shop now'});
 
         await user.click(link);
 
