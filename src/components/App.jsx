@@ -86,7 +86,7 @@ export default function App() {
 
     return (
         <div id='wrapper'>
-            <NavBar />
+            <NavBar cart={cart}/>
             <Outlet context={{
                 cart,
                 addToCart,
