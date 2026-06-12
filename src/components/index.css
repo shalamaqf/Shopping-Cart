@@ -25,7 +25,7 @@ body {
   height: 100vh;
 }
 
-p, a, h1, h3, h2, input, label, button {
+p, a, h1, h3, h2, input, label, button, span {
   font-family: "Open Sans", sans-serif;
   line-height: 1.5;
 }
